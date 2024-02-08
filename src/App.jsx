@@ -1,27 +1,36 @@
 import './App.css';
+import { useState } from 'react';
 
 function App() {
+  // const size = 120;
+  const [size, setSize] = useState(40);
+  const [text, setText] = useState("Do you want to be my Valentine ?")
+  function creste(){
+    setSize(size + 50)
+  }
+  function valentine(){
+    setText("I love you")
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src="Octocat.png" className="App-logo" alt="logo" />
-        <p>
-          GitHub Codespaces <span className="heart">♥️</span> React
-        </p>
-        <p className="small">
-          Edit <code>src/App.jsx</code> and save to reload.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </p>
-      </header>
+      <h1>{text}</h1>
+      <button
+      className="yes"
+      style={{
+        height: size,
+        width: size,
+      }}
+      onClick={valentine}
+      >yes</button>
+      <button 
+      onClick={creste} 
+      className='no'
+      style={{
+        height: 40,
+        width: 40,
+      }}
+      >no</button>
     </div>
   );
 }

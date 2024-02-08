@@ -29,3 +29,16 @@
 .small {
   font-size: 0.75rem;
 }
+
+
+.yes
+{
+  color: #680d6e;
+  background-color: limegreen;
+}
+.no
+{
+  color: #680d6e;
+  background-color: red;
+  margin-left: 8px;
+}
